@@ -11,6 +11,7 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 
+import ui.CadastroUsuario;
 import ui.InterfaceAdministrador;
 import ui.InterfaceBibliotecario;
 import ui.InterfaceMembroBiblioteca;
@@ -21,7 +22,7 @@ public class menu extends JPanel {
     private BufferedImage backgroundImage;
 
     public menu() {
-        Biblioteca biblioteca = new Biblioteca();
+        Biblioteca biblioteca = new Biblioteca(); // Cria uma nova instância de Biblioteca
 
         // Carrega a imagem de fundo
         try {
@@ -30,13 +31,15 @@ public class menu extends JPanel {
             e.printStackTrace();
         }
 
+        
+
         // Criação da barra de menu
         JMenuBar barramenu = new JMenuBar();
 
         // Criação dos menus
         JMenu fileMenu = new JMenu("Menu");
-        JMenu aboutMenu = new JMenu("Sobre");
         JMenu collectioMenu = new JMenu("Acervo de livros");
+        JMenu aboutMenu = new JMenu("Sobre");
 
         // Criação dos itens de menu para o menu
         JMenuItem bibliotecario = new JMenuItem("Bibliotecário");
@@ -44,9 +47,8 @@ public class menu extends JPanel {
         JMenuItem administrador = new JMenuItem("Administrador");
         JMenuItem sair = new JMenuItem("Sair");
         JMenuItem acervoDeLivros = new JMenuItem("Acervo de Livros");
-
-        // Criar o item de menu "Sobre"
         JMenuItem sobre = new JMenuItem("Sobre");
+           
         aboutMenu.add(sobre);
 
         // Adicionar um ActionListener para o item de menu "Sobre"
@@ -114,6 +116,18 @@ public class menu extends JPanel {
                 livros.add(new String[]{"7", "Introdução à Linguagem SQL ", "Thomas Nield ", "2016", "Emprestado"});
                 livros.add(new String[]{"8", "Modelagem de Dados", "José Osvaldo de Sordi", "2019", "Disponível"});
                 livros.add(new String[]{"9", "Governaça de Dados ", "Carlos Bardieri", "2019", "Disponível"});
+                livros.add(new String[]{"10", "Um Curso de Cálculo - Vol. 1 ", "Hamilton Luiz Guidorizzi","2018","Disponível"});                
+                livros.add(new String[]{"11", "Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros",  "Aditya Y. Bhargava", "2017","Emprestado"});
+                livros.add(new String[]{"12", "Estática: Mecânica para Engenharia", "R. C. Hibbeler", "2010","Disponível"});
+                livros.add(new String[]{"13", "Linguagem C - Completa e Descomplicada",  "André Backes", "2022","Disponível"});
+                livros.add(new String[]{"14", "Algoritmos e Lógica da Programação",  "Marco A. Furlan de Souza" ,"2019","Emprestado"});
+                livros.add(new String[]{"15", "Introdução à Programação com Python 4ª Edição: Algoritmos e lógica de programação para iniciantes", "Nilo Ney Coutinho Menezes", "2024","Disponível"});
+                livros.add(new String[]{"16", "HTML5 e CSS3: Guia Prático e Visual", "Elizabeth Castro, Bruce Hyslop", "2013", "Disponível"});
+                livros.add(new String[]{"17", "Construindo Aplicações web com PHP e MySQL", "André Milani", "2016", "Disponível"});
+                livros.add(new String[]{"18", "Use A Cabeça! PHP e MySQL",  "Lynn Beighley", "2010", "Disponível"});
+                livros.add(new String[]{"19", "React Native: Desenvolvimento de aplicativos mobile com React", "Bruna Escudelario, Diego Pinho", "2020", "Disponível"});
+                livros.add(new String[]{"20", "Ruby: Aprenda a programar na linguagem mais divertida",  "Lucas Souza", "2014", "Disponível"});
+                            
                 // Adicionar mais livros conforme necessário
 
                 AcervoDeLivros acervoDeLivrosFrame = new AcervoDeLivros(livros);
@@ -123,8 +137,8 @@ public class menu extends JPanel {
 
         // Adiciona os menus à barra de menu
         barramenu.add(fileMenu);
-        barramenu.add(aboutMenu);
         barramenu.add(collectioMenu);
+        barramenu.add(aboutMenu);
 
         // Adiciona os itens de menu ao menu
         fileMenu.add(bibliotecario);
@@ -148,11 +162,16 @@ public class menu extends JPanel {
     }
 
     public static void main(String[] args) {
+        CadastroUsuario cadastroUsuario = new CadastroUsuario();
+        
         JFrame frame = new JFrame("Sistema Bibliotecário");
         menu panel = new menu();
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1500, 800);
         frame.add(panel);
         frame.setVisible(true);
+        cadastroUsuario.setVisible(true);
+        cadastroUsuario.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
