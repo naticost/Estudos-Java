@@ -56,7 +56,7 @@ public class menu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(null,
-                        "Sistema Bibliotecário\n Atividade de seminario da matéria de POO do 3º periodo do curso de ADS \n Sistema de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI).\n \n\nProgramadores:\n- Adila \n- Yan \n- Natiele ",
+                        "Sistema Bibliotecário\n Atividade de seminario da matéria de POO do 3º periodo do curso de ADS, orientado pelo Professor Manfrine Santos. \n Sistema de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI).\n \n\nDesenvolvedores:\n- Adila \n- Yan \n- Natiele ",
                         "Sobre",
                         JOptionPane.INFORMATION_MESSAGE);
             }
