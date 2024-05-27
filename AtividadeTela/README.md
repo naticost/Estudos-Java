@@ -1,78 +1,140 @@
-## Sistema de Gerenciamento de Biblioteca
+# Sistema de Gerenciamento de Biblioteca
 
--Este é um sistema simples de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI) utilizando a biblioteca Swing.
+Este é um sistema simples de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI) utilizando a biblioteca Swing.
 
-### Funcionalidades
-- Adicionar Livros: Os usuários podem adicionar livros à biblioteca fornecendo detalhes como título, autor e ano de publicação.
-- Interfaces de Usuário Diferenciadas: Existem três interfaces de usuário distintas:
-- Bibliotecário: Permite ao bibliotecário adicionar livros à biblioteca.
-- Membro da Biblioteca: Permite aos membros da biblioteca visualizar os livros disponíveis.
-- Administrador: Similar à interface do membro da biblioteca, permite ao administrador visualizar os livros disponíveis.
-- Opção de Sair: Os usuários podem sair do sistema com segurança, com uma caixa de diálogo de confirmação ao clicar em "Sair".
+## Índice
 
-### Estrutura do Código
+1. [Equipe de Desenvolvimento](#equipe-de-desenvolvimento)
+2. [Propriedades para Criar uma Interface Gráfica](#propriedades-para-criar-uma-interface-gráfica)
+3. [Guia de Criação de Interface Gráfica com Java no NetBeans](#guia-de-criação-de-interface-gráfica-com-java-no-netbeans)
+    - [Requisitos](#requisitos)
+    - [Passo a Passo](#passo-a-passo)
+4. [Configurando e Programando em Java no Visual Studio Code](#configurando-e-programando-em-java-no-visual-studio-code)
+    - [Requisitos](#requisitos-1)
+    - [Passo a Passo](#passo-a-passo-1)
+5. [Estrutura do Projeto](#estrutura-do-projeto)
+6. [Referências de Estudo para Desenvolvimento](#referências-de-estudo-para-desenvolvimento)
 
--O código está organizado em três partes principais:
+## Equipe de Desenvolvimento
 
-### 1 Lógica de Negócios (logic):
-Contém a classe Biblioteca que define a estrutura da biblioteca e permite adicionar livros a ela.
+- **Adila Zairaa** (https://github.com/adizairaa)
+- **Natiele Costa** (https://github.com/naticost)
+- **Yan Fernandes** (https://github.com/yancfgomes)
 
-#### Biblioteca.java:
+## Propriedades para Criar uma Interface Gráfica
 
-- A classe `Biblioteca` representa a biblioteca e mantém uma lista de livros.
-- Um construtor inicializa a lista de livros.
-- O método `adicionarLivro` permite adicionar um novo livro à biblioteca.
-- O método `getLivros` retorna a lista de livros na biblioteca.
+- **JFrame:** Janela principal da aplicação que serve como contêiner de nível superior para outros componentes GUI. Todos os componentes e contêineres são adicionados dentro de um JFrame.
+  
+- **JPanel:** Um contêiner genérico usado para agrupar outros componentes. Pode ser utilizado para organizar layouts complexos dividindo a janela principal em várias seções.
 
-  #### Livro.java:
+- **JLabel:** Componente para exibir texto ou imagens. Utilizado frequentemente para rótulos de campos de entrada, instruções, ou qualquer tipo de texto informativo.
 
-- A classe `Livro` define a estrutura de um livro, incluindo propriedades como título, autor e ano de publicação.
-- Um construtor é fornecido para inicializar um objeto `Livro` com os valores fornecidos.
-- Métodos de acesso (`get`) estão disponíveis para recuperar detalhes específicos do livro, como título, autor e ano de publicação.
+- **JTextField:** Campo de texto de linha única para entrada de dados pelo usuário. Comum em formulários para entradas de dados como nomes, emails, etc.
 
-### Interfaces do Usuário (ui): 
--Inclui três classes de interface de usuário:
+- **JButton:** Botão que pode ser clicado pelo usuário para acionar eventos e executar ações. Pode ser personalizado com texto ou ícones.
 
-#### InterfaceBibliotecario.java:
+- **ActionListener:** Interface que deve ser implementada para lidar com eventos de ação, como cliques em botões. Define o método `actionPerformed(ActionEvent e)` onde a lógica de resposta ao evento é escrita.
 
-- Esta classe representa a interface do usuário para o bibliotecário.
-- Ela estende a classe `JFrame` para criar uma janela de interface gráfica.
-- Campos de texto permitem inserir informações sobre um novo livro, como título, autor e ano de publicação.
-- Um botão "Adicionar Livro" permite ao bibliotecário adicionar um novo livro à biblioteca quando os detalhes são preenchidos.
+- **Layout Manager:** Interfaces que definem o layout para organizar componentes dentro de contêineres. Exemplos incluem:
+  - **BorderLayout:** Divide o contêiner em cinco regiões: norte, sul, leste, oeste e centro.
+  - **FlowLayout:** Organiza os componentes na ordem em que são adicionados, em uma linha.
+  - **GridLayout:** Organiza os componentes em uma grade com células de tamanho igual.
+  - **BoxLayout:** Organiza os componentes em uma única linha ou coluna.
 
-#### InterfaceMembroBiblioteca.java:
+- **JTable:** Componente para exibir e editar dados tabulares. É altamente configurável e é comumente utilizado para mostrar listas de dados como registros de empréstimos, livros e usuários.
 
-- Esta classe representa a interface do usuário para o membro da biblioteca.
-- Também estende a classe `JFrame`.
-- A interface inclui um botão "Mostrar Livros" que, quando clicado, exibe uma janela com a lista de todos os livros disponíveis na biblioteca.
+- **JRadioButton:** Botões de opção que permitem ao usuário selecionar uma única opção de um grupo. Usado frequentemente em formulários para seleções exclusivas como gênero, sim/não, etc.
 
-#### InterfaceAdministrador.java:
+- **JComboBox:** Caixa de combinação que permite ao usuário selecionar uma opção de uma lista suspensa. Utilizado para selecionar entre várias opções pré-definidas, como estados, categorias, etc.
 
-- Esta classe representa a interface do usuário para o administrador.
-- Também estende a classe `JFrame`.
-- A interface é semelhante à do membro da biblioteca, com um botão "Mostrar Livros" para exibir a lista de livros disponíveis.
+## Guia de Criação de Interface Gráfica com Java no NetBeans
 
-### Classe Principal (main):
+### Requisitos
 
-#### Menu.java
--A classe Menu é a classe principal que inicia o programa. 
-- Ela cria a janela principal, configura a barra de menu e adiciona os itens de menu correspondentes às interfaces de usuário.
+- NetBeans IDE
+- JDK instalado
 
-### Funcionamento Geral:
+### Passo a Passo
 
-- Ao executar o programa, a classe `Main` é iniciada.
-- Ela cria uma instância da `Biblioteca` e, em seguida, instâncias das interfaces do usuário.
-- Cada interface oferece funcionalidades específicas de acordo com o tipo de usuário, como adicionar livros para o bibliotecário e mostrar livros para membros da biblioteca e administradores.
-- As interfaces são implementadas usando a biblioteca Swing do Java para criar elementos de interface gráfica, como janelas, botões e campos de texto.
-  #### Dependências
-Java Swing: Esta aplicação utiliza a biblioteca Swing para criar elementos de interface gráfica, como janelas, menus e botões.
+1. **Criar Projeto:** `File > New Project > Java Application`
+2. **Criar JFrame:** `New > JFrame Form`
+3. **Adicionar Componentes:** Arrastar componentes no editor de design.
+4. **Configurar Propriedades:** Alterar propriedades na janela `Properties`.
+5. **Adicionar Eventos:** `Events > Action > actionPerformed`.
+6. **Executar Projeto:** `File > Save All` e `Run`.
+7. **Distribuir Projeto:** `Run > Clean and Build Project` para gerar o JAR.
 
-### Propriedades para Criar uma Interface Gráfica:
+## Configurando e Programando em Java no Visual Studio Code
 
-- **JFrame:** O contêiner principal para uma janela de interface gráfica.
-- **JPanel:** Contêiner que pode conter outros componentes de interface gráfica.
-- **JLabel:** Usado para exibir texto ou imagens na interface do usuário.
-- **JTextField:** Campo de texto onde os usuários podem inserir texto.
-- **JButton:** Botão que pode ser clicado pelo usuário para realizar uma ação.
-- **ActionListener:** Interface usada para lidar com eventos de ação, como clicar em um botão.
-- **Layout Manager:** Usado para controlar a disposição e o dimensionamento dos componentes dentro de um contêiner.
+### Requisitos
+
+- Visual Studio Code
+- JDK instalado
+
+### Passo a Passo
+
+1. **Instalar JDK:** Baixar e adicionar ao `PATH`.
+2. **Instalar VS Code:** Baixar e instalar.
+3. **Instalar Extensões:** `Extension Pack for Java`.
+4. **Configurar Projeto:**
+   - Estrutura de pastas:
+     ```
+     MeuProjeto/
+     ├── src/
+     │   └── App.java
+     └── .vscode/
+         └── launch.json
+     ```
+   - Escrever código em `App.java`.
+   - Configurar `launch.json` para compilação e execução.
+5. **Compilar e Executar:** `javac App.java` e `java App` no terminal integrado ou pelo ícone de "play".
+6. **Depuração:** Adicionar breakpoints e iniciar depuração com `F5`.
+
+## Estrutura do Projeto
+
+```
+scr/
+├── enums/
+│   ├── Sexo.java
+│   ├── UF.java
+│
+├── exceptions/
+│   └── RegistroNaoEncontradoException.java
+│
+├── gui/
+│   ├── CadastrarLivros.form
+│   ├── CadastrarLivros.java
+│   ├── CadastrarUsuario.form
+│   ├── CadastrarUsuario.java
+│   ├── Devolucao.form
+│   ├── Devolucao.java
+│   ├── Emprestimo.form
+│   ├── Emprestimo.java
+│   ├── GerenciarLivros.form
+│   ├── GerenciarLivros.java
+│   ├── GerenciarUsuarios.form
+│   ├── GerenciarUsuarios.java
+│   ├── NovoEmprestimo.form
+│   ├── NovoEmprestimo.java
+│   ├── Sobre.form
+│   ├── Sobre.java
+│   ├── TelaPrincipal.form
+│   └── TelaPrincipal.java
+│
+├── main/
+│   └── BiblioTK.java
+│
+└── models/
+    ├── Database.java
+    ├── Emprestimo.java
+    ├── GeradorID.java
+    ├── Helper.java
+    ├── Livro.java
+    └── Usuario.java
+```
+
+## Referências de Estudo para Desenvolvimento
+
+- [Vídeo tutorial no YouTube](https://youtu.be/oRnFvPX5f8A?si=pZSt3ALyRmINSIDq)
+- [Dicas básicas de interface gráfica do usuário com o NetBeans na DIO](https://www.dio.me/articles/dicas-basicas-interface-grafica-do-usuario-com-o-netbeans)
+- [Como criar interface gráfica com Swing no Java pela Alura](https://www.alura.com.br/artigos/como-criar-interface-grafica-swing-java)
