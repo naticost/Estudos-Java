@@ -10,17 +10,13 @@ public class Main {
 
         System.out.println(minhafila);
 
-        System.out.println(minhafila.dequeue());
+        minhafila.enqueue(1);
+        System.out.println(minhafila);
+        minhafila.enqueue(2);
 
         System.out.println(minhafila);
 
-        minhafila.enqueue(new No("ultimo"));
 
-        System.out.println(minhafila);
-
-        System.out.println(minhafila.first());
-
-        System.out.println(minhafila);
 
 
 
