@@ -3,14 +3,12 @@ public class No {
     private Object object;
     private No refNo;
 
-
-    public No(){
+    public No() {
     }
 
-
-    public No (Object object){
+    public No(Object object) {
         this.refNo = null;
-        this.object=object;
+        this.object = object;
     }
 
     public Object getObject() {
@@ -21,12 +19,12 @@ public class No {
         this.object = object;
     }
 
-    public private getNo() {
-        return No;
+    public No getRefNo() {
+        return refNo;
     }
 
-    public void setNo(private no) {
-        No = no;
+    public void setRefNo(No refNo) {
+        this.refNo = refNo;
     }
 
     @Override
@@ -36,3 +34,4 @@ public class No {
                 '}';
     }
 }
+
