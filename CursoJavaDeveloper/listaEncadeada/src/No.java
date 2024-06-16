@@ -1,52 +1,47 @@
+
 public class No<T> {
 
     private T conteudo;
-    private No proximoNo;
+    private No proximoNo = null;
 
-    public No(){
-        this.proximoNo=null;
+    public No(T conteudo){
+        this.conteudo = conteudo;
     }
 
-    public No( T conteudo){
-        this.proximoNo = null;
-        this.conteudo=conteudo;
-
-
-    }
-    public No( T conteudo, No proximoNo) {
+    public No(T conteudo, No proximoNo) {
         this.conteudo = conteudo;
         this.proximoNo = proximoNo;
     }
-    public T getConteudo(){
+
+    public T getConteudo() {
         return conteudo;
     }
-    public void setConteudo(T conteudo){
+
+    public void setConteudo(T conteudo) {
         this.conteudo = conteudo;
     }
-    public No getProximoNo(){
+
+    public No getProximoNo() {
         return proximoNo;
     }
-    public void setProximoNo(No proximoNo){
+
+    public void setProximoNo(No proximoNo) {
         this.proximoNo = proximoNo;
     }
 
     @Override
     public String toString() {
-            return "No{" + "Conteudo = " + conteudo + '}';
+        return "No{" + conteudo + '}';
     }
 
-    public String toStringEncadeado(){
-        String str = "No{" + "Conteudo = " + conteudo + '}';
+    public String toStringEncadeado() {
+        String str = "No{" + conteudo + "}";
 
-        if (proximoNo != null){
+        if(proximoNo != null){
             str += "->" + proximoNo.toString();
-
         }else{
-            str += "-> null";
+            str += "->null";
         }
-
         return str;
     }
-
-    
 }
