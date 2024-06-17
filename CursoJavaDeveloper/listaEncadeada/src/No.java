@@ -4,6 +4,9 @@ public class No<T> {
     private T conteudo;
     private No proximoNo = null;
 
+    //Construtores: Inicializam o nó com ou sem o próximo nó.
+
+
     public No(T conteudo){
         this.conteudo = conteudo;
     }
@@ -28,6 +31,7 @@ public class No<T> {
     public void setProximoNo(No proximoNo) {
         this.proximoNo = proximoNo;
     }
+    //Retorna uma string com o conteúdo do nó.
 
     @Override
     public String toString() {

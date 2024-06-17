@@ -24,48 +24,54 @@ public class ListaEncadeada<T> {
         return getNo(index).getConteudo();
     }
 
-    private No<T> getNo(int index){
-        validaIndice(index);
-        No<T> noAuxiliar = referenciaEntrada;
-        No<T> noRetorno = null;
-        for(int i = 0; i <= index; i++){
-            noRetorno = noAuxiliar;
-            noAuxiliar = noAuxiliar.getProximoNo();
+    private No<T> getNo(int index) {
+/*Percorre a lista encadeada até o índice especificado e retorna o nó nessa posição. 
+Utiliza uma referência auxiliar (noAuxiliar) para iterar pela lista e outra variável (noRetorno) para armazenar o nó atual. */
+        validaIndice(index); // Verifica se o índice é válido
+        No<T> noAuxiliar = referenciaEntrada; // Começa no primeiro nó
+        No<T> noRetorno = null; // Variável para armazenar o nó que será retornado
+        for(int i = 0; i <= index; i++) { // Percorre a lista até o índice desejado
+            noRetorno = noAuxiliar; // Atualiza noRetorno para o nó atual
+            noAuxiliar = noAuxiliar.getProximoNo(); // Avança para o próximo nó
         }
-        return noRetorno;
+        return noRetorno; // Retorna o nó na posição index
     }
-
-    public T remove(int index){
-        validaIndice(index);
-        No<T> noPivor = getNo(index);
-        if(index == 0){
-            referenciaEntrada = noPivor.getProximoNo();
-            return noPivor.getConteudo();
+    
+    public T remove(int index) {
+        validaIndice(index); // Verifica se o índice é válido, lançando uma exceção se não for
+        No<T> noPivor = getNo(index); // Obtém o nó que está na posição indicada pelo índice
+        if(index == 0) { // Caso especial: removendo o primeiro nó
+            referenciaEntrada = noPivor.getProximoNo(); // Atualiza a referência de entrada para o próximo nó
+            return noPivor.getConteudo(); // Retorna o conteúdo do nó removido
         }
-        No<T> noAnterior = getNo(index - 1);
-        noAnterior.setProximoNo(noPivor.getProximoNo());
-        return noPivor.getConteudo();
+        No<T> noAnterior = getNo(index - 1); // Obtém o nó anterior ao nó que será removido
+        noAnterior.setProximoNo(noPivor.getProximoNo()); // Atualiza a referência do próximo nó no nó anterior para pular o nó removido
+        return noPivor.getConteudo(); // Retorna o conteúdo do nó removido
     }
+    
 
-    public int size(){
-        int tamanhoLista = 0;
-        No<T> referenciaAux = referenciaEntrada;
-        while(true){
-            if(referenciaAux != null){
-                tamanhoLista++;
-                if(referenciaAux.getProximoNo() != null){
-                    referenciaAux = referenciaAux.getProximoNo();
-                }else{
-                    break;
+    public int size() {
+        int tamanhoLista = 0; // Inicializa o contador de nós
+// a referenciaAux não é um contador de índice, mas uma referência usada para navegar pela lista, enquanto tamanhoLista é o verdadeiro contador que rastreia o número de nós visitados.
+
+        No<T> referenciaAux = referenciaEntrada; // Inicializa a referência auxiliar com o primeiro nó
+        while(true) {
+            if(referenciaAux != null) { // Enquanto a referência auxiliar não for null
+                tamanhoLista++; // Incrementa o contador de nós
+                if(referenciaAux.getProximoNo() != null) { // Se há um próximo nó
+                    referenciaAux = referenciaAux.getProximoNo(); // Move para o próximo nó
+                } else { // Se não há próximo nó
+                    break; // Interrompe o loop
                 }
-            }else{
-                break;
+            } else { // Se a referência auxiliar é null
+                break; // Interrompe o loop
             }
         }
-        return tamanhoLista;
+        return tamanhoLista; // Retorna o número de nós contados
     }
-
+    
     private void validaIndice(int index){
+//Esse método verifica se o índice fornecido é válido (dentro do intervalo da lista). Se o índice for inválido, ele lança uma exceção IndexOutOfBoundsException
         if(index >= size()){
             int ultimoIndice = size()-1;
             throw new IndexOutOfBoundsException("Não existe conteúdo no índice " + index + " desta lista. Esta lista só vai até o índice " + ultimoIndice + '.');
