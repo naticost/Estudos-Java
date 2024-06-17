@@ -8,8 +8,8 @@ application {
     mainClass = 'Project.App'
 }
 
-def variable = 10
-println "testing application"
+def variable = 21
+println "Natiele Costa"
 
 println "variable value = $variable"
 
@@ -24,7 +24,7 @@ def function (x) {
 }
 
 def myClosure = { // closure
-	println "in my custon closure"
+	println "Natiele Costa, dentro da function Closure"
 }
 
 def a = myClosure
