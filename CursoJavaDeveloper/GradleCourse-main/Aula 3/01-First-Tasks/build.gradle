@@ -18,6 +18,13 @@ task mySecondTask (group: MyGroup, description: "this is more than a test task")
     }    
 }
 
+task hello {
+    doLast {
+        println 'Hello, Gradle!'
+    }
+}
+
+
 tasks.named('tasks'){
     doLast {
         println "Modifying the end of tasks task"
