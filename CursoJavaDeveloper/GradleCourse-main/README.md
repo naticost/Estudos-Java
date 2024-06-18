@@ -83,6 +83,3 @@ Neste exemplo:
 ## Conclusão
 
 Gradle é uma ferramenta poderosa para automatizar o processo de build de projetos de software, facilitando a gestão de dependências, a execução de testes, e muitas outras tarefas de desenvolvimento. Ele não é uma extensão do código do projeto, mas sim uma ferramenta externa que orquestra e automatiza o ciclo de vida do desenvolvimento de software.
-```
-
-Este README agora inclui informações sobre os tipos de tarefas (tasks) no Gradle, mostrando como elas são usadas para diferentes aspectos do processo de build de um projeto Java.
