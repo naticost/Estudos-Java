@@ -1,4 +1,4 @@
-public class ListaDuplamenteEncadeada {
+public class ListaDuplamenteEncadeada<T>{
 
     private NoDuplo<T> primeiroNo;
     private NoDuplo<T> ultimoNo;
