@@ -1,4 +1,3 @@
-![Sistema de Gerenciamento de Biblioteca](https://blog.saraivaeducacao.com.br/wp-content/uploads/2022/03/biblioteca-universitaria.jpg)
 # Sistema de Gerenciamento de Biblioteca
 
 Este é um sistema simples de gerenciamento de biblioteca desenvolvido em Java, com uma interface gráfica de usuário (GUI) utilizando a biblioteca Swing.
