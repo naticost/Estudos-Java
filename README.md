@@ -5,7 +5,7 @@ Bem-vindo ao meu repositório de Estudos - Java! Aqui você encontrará tudo o q
 ## Tópicos Abordados
 
 ### 1. Gradle 
-Gradle é uma ferramenta que ajuda a construir e gerenciar projetos de software. Pense nisso como uma lista de tarefas automatizadas que compila seu código, baixa bibliotecas necessárias e empacota tudo para ser executado.[Exemplo](https://github.com/seu-usuario/seu-repositorio)
+Gradle é uma ferramenta que ajuda a construir e gerenciar projetos de software. Pense nisso como uma lista de tarefas automatizadas que compila seu código, baixa bibliotecas necessárias e empacota tudo para ser executado.[Exemplo](https://github.com/naticost/Estudos-Java/tree/main/CursoJavaDeveloper/GradleCourse-main)
 
 ### 2. Lista Encadeada 
 Uma lista encadeada é como uma corrente, onde cada link (ou nó) aponta para o próximo. Isso torna fácil adicionar ou remover itens sem reorganizar toda a lista.
