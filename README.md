@@ -31,13 +31,13 @@ Uma pilha é como uma pilha de pratos: o último prato colocado é o primeiro a 
 ### Collections
 Collections são como recipientes que armazenam múltiplos itens juntos, como uma caixa de ferramentas. Em Java, há diferentes tipos de coleções para diferentes necessidades, como listas, conjuntos e filas. 
 
-#### Listas (*List*)
+#### Listas 
 Uma lista (*List*) é uma coleção ordenada de elementos que permite duplicatas. É ideal para armazenar dados onde a ordem dos elementos é importante.
 
 - **ArrayList**: Baseado em um array redimensionável, oferece acesso rápido aos elementos.
 - **LinkedList**: Baseado em uma lista duplamente ligada, é eficiente para inserções e remoções.
 
-#### Conjuntos (*Set*)
+#### Conjuntos 
 Um conjunto (*Set*) é uma coleção de itens únicos, ou seja, não permite duplicatas. É ideal para armazenar dados onde a ordem não importa, mas a unicidade é essencial.
 
 - **HashSet**: Como um cesto de frutas onde a ordem não importa.
