@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public class Main {
-    public static void main(String[] agrs){
+    public static void main(String[] args ){
         Curso curso1 = new Curso();
         curso1.setTitulo("Curso Java");
         curso1.setDescricao("Descrição");
@@ -25,7 +25,14 @@ public class Main {
 
         Dev devNati = new Dev();
         devNati.setNome("Natiele");
-        System.out.println("conteudos Inscritos");
+        System.out.println("Conteúdos Inscritos Camila:" + devNati.getConteudoInscritos());
+        devNati.progredir();
+        devNati.progredir();
+        System.out.println("-");
+        System.out.println("Conteúdos Inscritos Camila:" + devNati.getConteudoInscritos());
+        System.out.println("Conteúdos Concluídos Camila:" + devNati.getConteudosConcluidos());
+        System.out.println("XP:" + devNati.calcularXP());
+
 
 
     }
