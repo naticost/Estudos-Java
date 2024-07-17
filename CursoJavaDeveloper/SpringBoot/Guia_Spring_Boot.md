@@ -74,7 +74,8 @@
 
 #### ORM (Object-Relational Mapping)
 - Mapeamento objeto-relacional para aproximar o paradigma de orientação a objetos ao contexto de banco de dados relacional.
-- ![Texto Alternativo](caminho/para/a/imagem.jpg)
+
+  ![Texto Alternativo](https://github.com/naticost/Estudos-Java/blob/main/CursoJavaDeveloper/SpringBoot/img/Curso%20Springboot%20-%20Aula%20-%20Projeto%20Springboot.pptx%20(1).png)
 
 
 #### JPA (Java Persistence API)
