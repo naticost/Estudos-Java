@@ -81,6 +81,8 @@
 #### JPA (Java Persistence API)
 - Especificação baseada em interfaces para persistência de objetos em Java.
 
+![Texto Alternativo]( https://github.com/naticost/Estudos-Java/blob/main/CursoJavaDeveloper/SpringBoot/img/Curso%20Springboot%20-%20Aula%20-%20Projeto%20Springboot.pptx.png
+)
 #### Mapeamento
 - Anotações de mapeamento do JPA:
   - Identificação
