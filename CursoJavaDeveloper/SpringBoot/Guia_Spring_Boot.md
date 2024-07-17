@@ -74,6 +74,8 @@
 
 #### ORM (Object-Relational Mapping)
 - Mapeamento objeto-relacional para aproximar o paradigma de orientação a objetos ao contexto de banco de dados relacional.
+- ![Texto Alternativo](caminho/para/a/imagem.jpg)
+
 
 #### JPA (Java Persistence API)
 - Especificação baseada em interfaces para persistência de objetos em Java.
